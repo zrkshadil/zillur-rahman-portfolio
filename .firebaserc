@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "shadil-portfolio"
+  },
+  "targets": {
+    "shadil-portfolio": {
+      "hosting": {
+        "zillur-rahman-portfolio": [
+          "zillur-rahman-portfolio"
+        ]
+      }
+    }
+  }
+}

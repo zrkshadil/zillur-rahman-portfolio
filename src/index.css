@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default Dark Mode Tokens */
+  --primary: #d4af37;
+  --primary-hover: #e5c05b;
+  --primary-dark: #b58e26;
+  --secondary: #0d1b3e;
+  --accent: #d4af37;
+  --background: #030712;
+  --surface: #060d1f;
+  --surface-card: #09142b;
+  --surface-hover: #122452;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(212, 175, 55, 0.2);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+.light {
+  /* Light Mode Tokens */
+  --primary: #996515;
+  --primary-hover: #b58e26;
+  --primary-dark: #6e5218;
+  --secondary: #f1f5f9;
+  --accent: #996515;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-card: #f1f5f9;
+  --surface-hover: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: rgba(181, 142, 38, 0.35);
+  --border-subtle: rgba(15, 23, 42, 0.1);
+}
+
+/* Custom Utilities and Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Accessibility focus ring */
+  *:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 3px;
+  }
+}
+
+/* Custom Glass & Luxury Accents */
+.glass-panel {
+  background: rgba(6, 13, 31, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(181, 142, 38, 0.25);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff7d6 0%, #d4af37 40%, #f3e5ab 70%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light .gold-gradient-text {
+  background: linear-gradient(135deg, #6e5218 0%, #996515 50%, #3e2804 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
